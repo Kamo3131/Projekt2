@@ -1,0 +1,26 @@
+#include "File.h"
+
+File::File(const std::string name){
+    setName(name);
+}
+File::~File() = default;
+File::File(const File & file){
+    setName(file.getName());
+}
+File::File(File && file){
+    setName(std::move(file.getName()));
+}
+File & File::operator=(const File & file){
+    setName(file.getName());
+    return *this;
+}
+File & File::operator=(File && file){
+    setName(std::move(file.getName()));
+    return *this;
+}
+size_t File::getSize() const{
+    return size;
+}
+void File::print(std::ostream & os, int indent, const std::string & relativePath) const{
+    
+}
