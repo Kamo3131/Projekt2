@@ -22,5 +22,12 @@ size_t File::getSize() const{
     return size;
 }
 void File::print(std::ostream & os, int indent, const std::string & relativePath) const{
-    
+    for(int i=0; i<indent; i++){
+        os << "\t";
+    }
+    os << "File: " << getName() << " [path: " << relativePath << "]" << std::endl;
+}
+
+std::unique_ptr<FSItem> File::clone() const{
+    return std::make_unique<File>(*this);
 }
