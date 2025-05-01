@@ -24,7 +24,7 @@ By using this method on a directory, you will print the directory itself and all
 Example of using print, with parameters os = std::cout, indent = 0, relativePath = "Grail_War" is:
 
 
-Dir: Grail_War [path: Grail_War]
+Dir: Grail_War [path: Grail_War]<br/>
 	File: grail.png [path: Grail_War/grail.png]
 	Dir: Masters [path: Grail_War/Masters]
 		File: sigil.jpg [path: Grail_War/Masters/sigil.jpg]
