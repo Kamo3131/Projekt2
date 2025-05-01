@@ -41,5 +41,5 @@ std::unique_ptr<FSItem> clone() const;
 Creates a real directory. Then creates contents of this directory inside of it.
 It takes one argument of type std::filesystem::path, which is the path where directory will be created.
 */
-void create(std::filesystem::path relativePath) const;
+void create(std::filesystem::path creationPath) const;
 };

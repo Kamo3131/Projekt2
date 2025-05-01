@@ -39,5 +39,5 @@ virtual std::unique_ptr<FSItem> clone() const = 0;
 /*
 Pure virtual method defined in children classes.
 */
-virtual void create(std::filesystem::path relativePath) const = 0;
+virtual void create(std::filesystem::path creationPath) const = 0;
 };

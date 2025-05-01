@@ -35,5 +35,5 @@ std::unique_ptr<FSItem> clone() const;
 Creates a real file.
 It takes one argument of type std::filesystem::path, which is the path where file will be created.
 */
-void create(std::filesystem::path relativePath) const;
+void create(std::filesystem::path creationPath) const;
 };

@@ -32,8 +32,8 @@ std::unique_ptr<FSItem> File::clone() const{
     return std::make_unique<File>(*this);
 }
 
-void File::create(std::filesystem::path relativePath) const{
-    std::filesystem::path file_path = relativePath/getName();
+void File::create(std::filesystem::path creationPath) const{
+    std::filesystem::path file_path = creationPath/getName();
     std::ofstream file(file_path);
     if(file.is_open()){
         file.close();

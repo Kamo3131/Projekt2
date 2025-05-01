@@ -53,8 +53,8 @@ std::unique_ptr<FSItem> Directory::clone() const{
     return std::make_unique<Directory>(*this);
 }
 
-void Directory::create(std::filesystem::path relativePath) const{
-    std::filesystem::path directory_path = relativePath/getName();
+void Directory::create(std::filesystem::path creationPath) const{
+    std::filesystem::path directory_path = creationPath/getName();
     if(!exists(directory_path)){
         std::filesystem::create_directory(directory_path);
         std::cout << "Directory created: " << directory_path << std::endl;
