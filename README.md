@@ -25,13 +25,13 @@ Example of using print, with parameters os = std::cout, indent = 0, relativePath
 
 
 Dir: Grail_War [path: Grail_War]<br/>
-	&emsp;File: grail.png [path: Grail_War/grail.png]<br/>
-	Dir: Masters [path: Grail_War/Masters]<br/>
-		File: sigil.jpg [path: Grail_War/Masters/sigil.jpg]<br/>
-		File: servant.txt [path: Grail_War/Masters/servant.txt]<br/>
-		File: swords.png [path: Grail_War/Masters/swords.png]<br/>
-	Dir: Church [path: Grail_War/Church]<br/>
-		File: priest.txt [path: Grail_War/Church/priest.txt]<br/>
+	&emsp;&emsp;File: grail.png [path: Grail_War/grail.png]<br/>
+	&emsp;&emsp;Dir: Masters [path: Grail_War/Masters]<br/>
+		&emsp;&emsp;&emsp;&emsp;File: sigil.jpg [path: Grail_War/Masters/sigil.jpg]<br/>
+		&emsp;&emsp;&emsp;&emsp;File: servant.txt [path: Grail_War/Masters/servant.txt]<br/>
+		&emsp;&emsp;&emsp;&emsp;File: swords.png [path: Grail_War/Masters/swords.png]<br/>
+	&emsp;&emsp;Dir: Church [path: Grail_War/Church]<br/>
+		&emsp;&emsp;&emsp;&emsp;File: priest.txt [path: Grail_War/Church/priest.txt]<br/>
 
 
 There is also an optional method, which was not necesary for the project, but I did it anyway. It's "create" method:
