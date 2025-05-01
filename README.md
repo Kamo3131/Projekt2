@@ -25,7 +25,7 @@ Example of using print, with parameters os = std::cout, indent = 0, relativePath
 
 
 Dir: Grail_War [path: Grail_War]<br/>
-	File: grail.png [path: Grail_War/grail.png]<br/>
+	&emsp;File: grail.png [path: Grail_War/grail.png]<br/>
 	Dir: Masters [path: Grail_War/Masters]<br/>
 		File: sigil.jpg [path: Grail_War/Masters/sigil.jpg]<br/>
 		File: servant.txt [path: Grail_War/Masters/servant.txt]<br/>
