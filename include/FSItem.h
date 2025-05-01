@@ -2,6 +2,8 @@
 #include <iostream>
 #include <string>
 #include <memory>
+#include <filesystem>
+#include <fstream>
 class FSItem{
 private:
 std::string name;
@@ -17,4 +19,5 @@ void setName(std::string name);
 std::string getName() const;
 virtual void print(std::ostream & os, int indent, const std::string & relativePath) const = 0;
 virtual std::unique_ptr<FSItem> clone() const = 0;
+virtual void create(std::filesystem::path relativePath) const = 0;
 };

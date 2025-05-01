@@ -52,3 +52,18 @@ void Directory::print(std::ostream & os, int indent, const std::string & relativ
 std::unique_ptr<FSItem> Directory::clone() const{
     return std::make_unique<Directory>(*this);
 }
+
+void Directory::create(std::filesystem::path relativePath) const{
+    std::filesystem::path directory_path = relativePath/getName();
+    if(!exists(directory_path)){
+        std::filesystem::create_directory(directory_path);
+        std::cout << "Directory created: " << directory_path << std::endl;
+    }
+    else{
+        std::cout << "Failed to create directory: " << directory_path << std::endl;
+    }
+
+    for(const std::unique_ptr<FSItem> & item : items){
+        item->create(directory_path);
+    }
+}

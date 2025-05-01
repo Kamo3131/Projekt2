@@ -31,3 +31,15 @@ void File::print(std::ostream & os, int indent, const std::string & relativePath
 std::unique_ptr<FSItem> File::clone() const{
     return std::make_unique<File>(*this);
 }
+
+void File::create(std::filesystem::path relativePath) const{
+    std::filesystem::path file_path = relativePath/getName();
+    std::ofstream file(file_path);
+    if(file.is_open()){
+        file.close();
+        std::cout << "File created: " << file_path << std::endl;
+    }
+    else{
+        std::cout << "Failed to create a file: " << file_path << std::endl;
+    }
+}

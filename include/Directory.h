@@ -20,4 +20,5 @@ void addItem(const FSItem & item);
 // std::vector<std::unique_ptr<FSItem>> getItems() const;
 void print(std::ostream & os, int indent, const std::string & relativePath) const;
 std::unique_ptr<FSItem> clone() const;
+void create(std::filesystem::path relativePath) const;
 };

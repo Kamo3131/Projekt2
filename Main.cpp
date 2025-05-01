@@ -20,6 +20,8 @@ church.addItem(priest);
 grailWar.addItem(masters);
 grailWar.addItem(church);
 grailWar.print(std::cout, 0, "Grail_War");
+
+grailWar.create("../creationTests");
 // masters.print(std::cout, 0, "Masters");
 
 return 0;
